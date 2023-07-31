@@ -13,12 +13,17 @@
             $stmt->execute([$email]); 
             $user = $stmt->fetch();
             if ($user) {
-                // email found
                 echo "This email is used by another person. Kindly login or signup with another email.";
             } 
             else{
                 $query = "insert into all_users (username,email,password) values ('$username','$email','$password')";
                 mysqli_query($con,$query);
+                
+                $query = "select * from all_users where email = '$email' limit 1";
+                $result = mysqli_query($con,$query);
+                $user_data = mysqli_fetch_assoc($result);
+                
+                $_SESSION['id'] = $user_data['id'];
                 header("Location: logged_in.php");
                 die;
             }
@@ -50,6 +55,9 @@
         <input type="submit" value="signup">
 
     </form>
+    <br>
+    <button><a href="login.php">Login</a></button>
+
 
 </body>
 </html>

@@ -38,7 +38,7 @@
             $result = $con->query($sql); 
     
             if ($result == false) {
-                echo "Error:" . $sql . "<br>" . $conn->error;
+                echo "Error:" . $sql . "<br>" . $con->error;
             }
         }
 
@@ -47,12 +47,12 @@
             $result = $con->query($sql);
 
             if ($result == TRUE) {
-            echo "New record created successfully.";
+            echo "New records created successfully.";
             }else{
-            echo "Error:". $sql . "<br>". $conn->error;
+            echo "Error:". $sql . "<br>". $con->error;
             } 
             
-            $conn->close(); 
+             
         }
         else{
 
@@ -62,11 +62,31 @@
             if ($result == TRUE) {
                 echo "Record updated successfully.";
             }else{
-                echo "Error:" . $sql . "<br>" . $conn->error;
+                echo "Error:" . $sql . "<br>" . $con->error;
             }
+             
         }
         
-        
+    }
+    if(isset($_POST['logout'])){
+        session_destroy();
+        header("Location: login.php");
+    }
+    
+    if(isset($_POST['delete'])){
+        $sql = "DELETE FROM `single_user` WHERE `user_id`='$id'";
+        $result = $con->query($sql);
+        if ($result == False) {
+           echo "Error:" . $sql . "<br>" . $con->error;
+        }
+
+        $sql = "DELETE FROM `all_users` WHERE `id`='$id'";
+        $result = $con->query($sql);
+        if ($result == False) {
+           echo "Error:" . $sql . "<br>" . $con->error;
+        }
+
+        header("Location: login.php");
     }
 ?>
 
@@ -94,9 +114,11 @@
         Address <input type="text" name="address" value="<?php echo $address; ?>">
         <br>
         <input type="submit" value="Update" name="update">
+        <input type="submit" value="Logout" name="logout">
+        <input type="submit" value="delete my account" name="delete">
 
     </form>
-    <br>
-    <button><a href="login.php">Logout</a></button>
+    
+
 </body>
 </html>

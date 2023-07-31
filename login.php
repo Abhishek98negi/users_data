@@ -50,6 +50,8 @@
         <input type="submit" value="Login">
 
     </form>
+    <br>
+    <button><a href="signup.php">Signup</a></button>
         
 </body>
 </html>
