@@ -41,23 +41,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signup</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Signup</h1>
 
-    <form action="signup.php" method="post">
-        <input type="text" name="username" placeholder="username..." required>
-        <br>
-        <input type="email" name="email" placeholder="email..." required>
-        <br>
-        <input type="password" name="password" placeholder="password.." required>
-        <br>
-        <input type="submit" value="signup">
+    <div class="main-div">
+        <h1>Sign up</h1>
 
-    </form>
-    <br>
-    <button><a href="login.php">Login</a></button>
+        <form action="signup.php" method="post">
+            <input type="text" name="username" class="input" placeholder="username..."  required>
+            <br>
+            <input type="email" name="email" class="input" placeholder="email..."  required>
+            <br>
+            <input type="password" name="password" class="input" placeholder="password.."  required>
+            <br>
+            <input type="submit" value="Sign up" class="button">
+        </form>
 
+        <h3>already have an account?</h3>     
+
+        <button class="button"><a href="login.php">Login</a></button>
+    </div>
 
 </body>
 </html>

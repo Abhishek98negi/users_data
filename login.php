@@ -38,20 +38,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>  
-    <h1>Login</h1>
 
-    <form action="login.php" method="post">
-        <input type="email" name="email" placeholder="email..." required>
-        <br>
-        <input type="password" name="password" placeholder="password.." required>
-        <br>
-        <input type="submit" value="Login">
+    <div class="main-div">
+        <h1>Login</h1>
 
-    </form>
-    <br>
-    <button><a href="signup.php">Signup</a></button>
-        
+        <form action="login.php" method="post">
+            <input type="email" name="email" class="input" placeholder="email..." required>
+            <br>
+            <input type="password" name="password" class="input" placeholder="password.." required>
+            <br>
+            <input type="submit" value="Login" class="button">
+
+        </form>
+        <h3>new user?</h3>        
+        <button class="button"><a href="signup.php">Sign up</a></button>
+    </div>
 </body>
 </html>

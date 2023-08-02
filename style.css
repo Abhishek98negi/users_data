@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato&display=swap');
+
+body{
+    font-family: 'DM Serif Display', serif;
+}
+
+.main-div{
+    padding: 70px 0;
+    border-color: black;
+    text-align: center;
+}
+
+.main-div h1{
+    margin-bottom: 32px;
+}
+
+.main-div h3{
+    margin-bottom: 2px;
+    margin-top: 24px;
+}
+
+
+.input{
+    width: 277px;
+    height: 32px;
+    margin-bottom: 6px;
+    border-radius: 9px;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.button{
+    width: 89px;
+    height: 34px;
+    margin-top: 7px;
+    font-family: 'Lato', sans-serif;
+
+    border: 0;
+    border-radius: 9px;
+    font-size: 20px;
+    background-color:#00A3A3;
+    color: black;
+    cursor: pointer;
+}
+
+
+.button a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.update{
+    margin-right: 26px;
+    margin-bottom: 15px;
+    margin-top: 24px;
+}
+
+.delete-acc{
+    width: 209px;
+    background-color:  #ffc6c6;
+    color: #b31212;
+}
+
+.container {
+    /* border: 3px solid #1a1010; */
+    /* padding: 0px 0; */
+    display: flex;
+    margin-left: 25%;
+    margin-right: 20%;
+    height: 36px;
+    margin-bottom: 14px ;
+}
+
+.container h3{
+    margin-top: 0px;
+}
+
+.child1 {
+    flex: 1;
+    text-align: left;
+    /* border: 2px solid red; */
+    font-size: 24px;
+
+}
+
+
+.child2{
+    /* border: 2px solid red; */
+    width: 75%;
+    text-align: left;
+}
+
+.child-input{
+    /* margin: 2px; */
+    border-radius: 7px;
+    font-size: 20px;
+}

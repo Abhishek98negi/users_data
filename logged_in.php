@@ -98,27 +98,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>logged in</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="heading">Hello <?php echo $user_data['username'] ?></h1>
-    
-    <form action="" method="post">
-        <p>Username <?php echo $username; ?></p>
-        <p>Email <?php echo $email; ?></p>
-        Password <input type="text" name="password" value="<?php echo $password; ?>" >
-        <br>
-        Phone <input type="text" name="phone" value="<?php echo $phone; ?>">
-        <br>
-        About you <input type="textarea" name="about" value="<?php echo $about; ?>">
-        <br>
-        Address <input type="text" name="address" value="<?php echo $address; ?>">
-        <br>
-        <input type="submit" value="Update" name="update">
-        <input type="submit" value="Logout" name="logout">
-        <input type="submit" value="delete my account" name="delete">
 
-    </form>
-    
+    <div class="main-div">
+
+        <h1>Your data</h1>
+        
+        <form action="" method="post">
+            <div class="container">
+                <h3 class="child1">Name</h3>
+                <h3 class="child2"><?php echo $username; ?></h3>
+            </div>
+            <div class="container">
+                <h3 class="child1">Email</h3>
+                <h3 class="child2"><?php echo $email; ?></h3>
+            </div>
+            <div class="container">
+                <h3 class="child1 child1-label">Password</h3>
+                <input type="text" class="child2 child-input" name="password" value="<?php echo $password; ?>" >
+            </div>
+            <div class="container">
+                <h3 class="child1 child1-label">Phone</h3> 
+                <input type="text" class="child2 child-input" name="phone" value="<?php echo $phone; ?>">
+            </div>
+            <div class="container">
+                <h3 class="child1 child1-label">Address</h3>
+                <input type="text" class="child2 child-input" name="address" value="<?php echo $address; ?>">
+            </div>
+            <div class="container">
+                <h3 class="child1 child1-label">About you</h3>
+                <input type="text" class="child2 child-input" name="about" value="<?php echo $about; ?>">
+            </div>
+            
+           
+
+
+            <input class="button update" type="submit" value="Update" name="update">
+            <input class="button" type="submit" value="Logout" name="logout">
+            <br>
+            <input class="button delete-acc" type="submit" value="Delete my account" name="delete">
+
+        </form>
+        
+    </div>
 
 </body>
 </html>
